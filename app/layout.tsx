@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import {  Geist_Mono , Work_Sans } from "next/font/google";
+import { Work_Sans, Gabarito } from "next/font/google";
 import "./globals.css";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
+  subsets: ["latin"],
+});
+const gabarito = Gabarito({
+  variable: "--font-gabarito",
   subsets: ["latin"],
 });
 
@@ -20,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.variable} antialiased`}
+        className={`${workSans.variable} ${gabarito.variable} antialiased font-[family-name:var(--font-work-sans)]`}
       >
         {children}
       </body>
