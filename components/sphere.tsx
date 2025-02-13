@@ -1,32 +1,32 @@
 "use client"
 import React, { useEffect, useRef } from "react";
 
-const GradientSphere = ({ size}: { size: string}) => {
+const GradientSphere = ({size}: { size: 'sm' | 'md' | 'lg' }) => {
 
     const ball = {
-        'sm': 28,
-        'md': 32,
-        'lg': 44
+        'sm': 'w-28 h-28 sphere-sm',
+        'md': 'w-32 h-32 sphere-md',
+        'lg': 'w-44 h-44 sphere-lg'
     }
-    const sphereRef = useRef(null);
-    const velocity = useRef({ x: 0, y: 0 });
-    const position = useRef({ x: 0, y: 0 });
-    const lastMouse = useRef({ x: 0, y: 0 });
+    const sphereRef = useRef<HTMLDivElement | null>(null);
+    const velocity = useRef({x: 0, y: 0});
+    const position = useRef({x: 0, y: 0});
+    const lastMouse = useRef({x: 0, y: 0});
     const isMoving = useRef(false);
     useEffect(() => {
         let damping = 0.95; // Reduces velocity over time
         let minVelocity = 3.5; // Minimum force applied
         let maxForce = 30; // Limits max force
-        let animationFrame;
-        let bounceFacctor =  1.1;
-        const handleMouseMove = (e) => {
+        let animationFrame: number;
+        let bounceFacctor = 1.1;
+        const handleMouseMove = (e: MouseEvent) => {
             const mouseX = e.clientX;
             const mouseY = e.clientY;
 
             // 커서 속도 계산
             const speedX = mouseX - lastMouse.current.x;
             const speedY = mouseY - lastMouse.current.y;
-            lastMouse.current = { x: mouseX, y: mouseY };
+            lastMouse.current = {x: mouseX, y: mouseY};
 
             if (sphereRef.current) {
                 const sphere = sphereRef.current;
@@ -59,7 +59,7 @@ const GradientSphere = ({ size}: { size: string}) => {
 
                     // 반발력 적용 후 움직이기
                     position.current.x += velocity.current.x * bounceFacctor;
-                    position.current.y += velocity.current.y* bounceFacctor;
+                    position.current.y += velocity.current.y * bounceFacctor;
 
                     sphere.style.transform = `translate3d(${position.current.x}px, ${position.current.y}px, 0)`;
                 }
@@ -130,13 +130,10 @@ const GradientSphere = ({ size}: { size: string}) => {
             cancelAnimationFrame(animationFrame);
         };
     }, []);
-    return (
-
-                <div
-                    ref={sphereRef}
-                    className={`w-${ball[size]} h-${ball[size]} rounded-full sphere-${size}`}
-                ></div>
-    );
+    return <div
+        ref={sphereRef}
+        className={`${ball[size]} ${ball[size]} rounded-full`}
+    ></div>
 };
 
 export default GradientSphere;
