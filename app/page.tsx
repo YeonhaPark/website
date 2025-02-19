@@ -1,98 +1,78 @@
 import Image from "next/image";
-import GradientSphere from "@/components/sphere";
+import SectionTemplate from "@/components/section-template";
+import Card from "@/components/card"
+import HeroText from "@/components/hero-text"
+import { sideProjects } from "@/constants";
+import React from "react";
+
+
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-work-sans)]">
-      <main className="w-96 flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div>
-          <div className="flex space-x-[-40px]">
-            <GradientSphere size={'sm'}/>
-            <GradientSphere size={'lg'}/>
-            <GradientSphere size={'md'}/>
-          </div>
-          <span>Hello, I'm Yeonha, </span>
-
-          <span>
-            A Web3 frontend engineer based in Seoul.
-          </span>
+    <div className="px-6 sm:px-6 lg:px-10 grid-rows-[20px_1fr_20px] justify-items-center min-h-screen font-[family-name:var(--font-work-sans)]">
+      <main className="relative flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <section className=" pt-10 pb-14 border-b border-slate-400 mb-4">
+          <HeroText />
           <p>
-            I make beautiful websites and crypto applications. I am enthusiastic learner and communicator. I'm currently
-            looking for a new development role. Hire me?
+            I build delightful user interfaces with a focus on delivering accessible product experiences.
+            Currently looking for a new development role. Take a look around my website and get to know more about me.
           </p>
-        </div>
+          <div className="flex gap-4 items-center flex-col sm:flex-row mt-6">
+            <a
+                className="btn-hover border-slate-50 rounded-full border border-solid border-transparent transition-colors font-[family-name:var(--font-gabarito)] flex items-center justify-center bg-background text-foreground gap-2 bg-[#383838] text-sm sm:text-base py-2 px-4 sm:px-5"
+                href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+              More Information →
+            </a>
+          </div>
+        </section>
+        <SectionTemplate title={"Side Projects"}>
+          <div className={"flex flex-col gap-20 lg:gap-8"}>
+            {sideProjects.map((project) =>
+                <Card key={project.title}
+                      title={project.title}
+                      github={project.github}
+                   description={project.description}
+                      usedSkills={project.usedSkills}
+                   src={project.src}/>)}
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        </SectionTemplate>
+        <SectionTemplate title={"Recent Posts"}>
+          <div className={"flex flex-col gap-5"}>
+            <div className={'flex gap-5 rounded-2xl py-3 px-4'}>
+              <Image className={"rounded-2xl"} src={"/crypto-crossword-thumb.png"} alt={'crypto-crossword'}
+                     width={"240"} height={"180"}/>
+              <div className={'font-[family-name:var(--font-gabarito)]'}>
+                <h4 className={"font-semibold font-[family-name:var(--font-gabarito)]"}>Cryptocrossword</h4>
+                <p>Test your crypto knowledge solving crossword game. Earn NFT rewards each time you break a quest.</p>
+              </div>
+            </div>
+            <div className={'flex gap-5 rounded-2xl bg-[#F6F6F6] py-3 px-4'}>
+              <Image className={"rounded-2xl"} src={"/crypto-crossword-thumb.png"} alt={'crypto-crossword'}
+                     width={"240"} height={"180"}/>
+              <div>
+                <h4 className={"font-semibold mt-4 font-[family-name:var(--font-gabarito)]"}>Cryptocrossword</h4>
+                <p>Test your crypto knowledge solving crossword game. Earn NFT rewards each time you break a quest.</p>
+              </div>
+            </div>
+            <div className={'flex gap-5 rounded-2xl bg-[#F6F6F6] py-3 px-4'}>
+              <Image className={"rounded-2xl"} src={"/bistro-map-front.png"} alt={'bistro-map'} width={"240"}
+                     height={"180"}/>
+              <div>
+                <h4 className={"font-semibold mt-4"}>Bistro Map</h4>
+                <p>Publish your thoughts and reviews and get rewarded</p>
+              </div>
+            </div>
+
+          </div>
+
+        </SectionTemplate>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="py-5 row-start-3 flex gap-6 flex-wrap items-center justify-center text-xs">
+        © 2025 Park Yeonha
       </footer>
     </div>
   );
