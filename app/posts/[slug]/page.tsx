@@ -2,9 +2,12 @@ import { getArticleData } from "@/lib/articles";
 import Link from "next/link"
 import BlogTemplate from "@/components/blog-template";
 import Footer from "@/components/footer";
-const Article = async ({params}: { params: { slug: string }}) => {
-    const articleData = await getArticleData(params.slug);
+type Params = Promise<{ slug: string }>
+const Article = async ( { params }: { params: Params }  ) => {
+    const { slug } = await params;
+    const articleData = await getArticleData(slug);
     return  <BlogTemplate>
+        <>
         <section className="w-full mx-auto mt-20  flex flex-col gap-5">
             <div className="flex justify-between">
         <Link href={"/posts"}>
@@ -18,7 +21,7 @@ const Article = async ({params}: { params: { slug: string }}) => {
             <article className={"mt-14 whitespace-pre-line overflow-x-scroll"}
                      dangerouslySetInnerHTML={{__html: articleData.contentHtml}}/>
         </section>
-        <Footer />
+        <Footer /></>
     </BlogTemplate>
 }
 
