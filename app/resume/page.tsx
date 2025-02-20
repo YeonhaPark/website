@@ -1,9 +1,10 @@
 import Tag from "@/components/tag"
 import { about, experience, education, skills, languages } from "@/constants"
+import GradientTemplate from "@/components/gradient-template";
 export default function Page() {
-    return <div>
+    return <GradientTemplate>
         <main>
-            <section id={"about"} className={'mb-20'}>
+            <section id={"about"} className={'my-20'}>
                 <div className={"text-xl font-semibold mb-4"}><h2>About</h2></div>
                 <div>
                     {about.map((el: string, idx: number) => <p key={idx} className={"mb-2"}>{el}</p>)}
@@ -39,7 +40,7 @@ export default function Page() {
                                     <h3 className={"font-semibold text-sm mb-1"}>
                                         {el.role}
                                     </h3>
-                                    <pre className={"text-sm mb-5"}>{el.description}</pre>
+                                    <pre className={"text-sm mb-5 whitespace-pre-wrap"}>{el.description}</pre>
                                     {el.skills ? <ul className="flex gap-2">
                                         {el.skills.map((el: string) => <Tag key={el} title={el}/>)}
                                     </ul>: null}
@@ -84,5 +85,5 @@ export default function Page() {
                 </div>
             </section>
         </main>
-    </div>
+    </GradientTemplate>
 }
