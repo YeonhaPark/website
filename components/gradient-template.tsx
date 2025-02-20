@@ -1,6 +1,7 @@
 "use client"
 import DomContentLoadListener from "@/components/dom-content-load-listener";
 import {JSX} from "react";
+import Header from "@/components/header";
 export default function GradientTemplate({ children }: {children: JSX.Element}) {
     return <>
         <svg xmlns={"http://www.w3.org/2000/svg"} version="1.1">
@@ -22,15 +23,7 @@ export default function GradientTemplate({ children }: {children: JSX.Element}) 
         <DomContentLoadListener/>
         <div className={'h-full overflow-scroll absolute top-0 left-0 right-0 flex justify-center text-white mx-auto'}>
             <div className={"h-full w-full max-w-md lg:max-w-3xl items-center flex flex-col "}>
-                <header
-                    className="p-6 sm:px-6 lg:px-10 self-end text-foreground font-[family-name:var(--font-work-sans)] font-medium">
-                    <li className={"flex gap-4"}>
-                        <a href="/">Home</a>
-                        <a href="/resume">Information</a>
-                        <a href="/posts">Posts</a>
-                    </li>
-                    {/*<ThemeToggle />*/}
-                </header>
+                <Header />
                 {children}
             </div>
         </div>

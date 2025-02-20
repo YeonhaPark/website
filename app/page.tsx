@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SectionTemplate from "@/components/section-template";
 import Card from "@/components/card"
 import HeroText from "@/components/hero-text"
