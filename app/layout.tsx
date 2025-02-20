@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Work_Sans, Gabarito } from "next/font/google";
+import { Work_Sans, Gabarito, Wix_Madefor_Text } from "next/font/google";
 import "./globals.css";
-import DomContentLoadListener from "@/components/DomContentLoadListener";
+import React from "react";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
+  subsets: ["latin"],
+});
+const wixMadeforText = Wix_Madefor_Text({
+  variable: "--font-wix-madefor-text",
   subsets: ["latin"],
 });
 const gabarito = Gabarito({
