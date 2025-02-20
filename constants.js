@@ -2,6 +2,7 @@ const sideProjects = [
     {
         title: "Crypto Crossword",
         src: "/crypto-crossword-thumb.png",
+        website: "https://crypto-crossword.vercel.app/",
         description: "Test your crypto knowledge solving crossword game. Earn NFT rewards each time you break a quest.",
         usedSkills: ["TypeScript", "Solidity", "Emotion"],
         github: "https://github.com/YeonhaPark/crypto-crossword"
@@ -9,6 +10,7 @@ const sideProjects = [
     {
         title: "BistroMap",
         src: "/bistro-map-front.png",
+        website: "https://bistro-map.vercel.app/",
         description: "Publish your thoughts and reviews and get rewarded.",
         github: "https://github.com/BCS-5/bistro-map",
         usedSkills: ["TypeScript", "Solidity", "Emotion"]
@@ -17,6 +19,7 @@ const sideProjects = [
         title: "Gyrolly",
         description: "This DePIN project is built on mobile platform with objective to platform that blends fitness with the crypto world.",
         src: "/gyrolly.png",
+        website: "https://ethglobal.com/showcase/gyrolly-syiqu",
         github: "https://github.com/YeonhaPark/gyrolly",
         usedSkills: ["React-native", "Typescript", "NodeJS", "Solidity"]
     }
@@ -58,11 +61,12 @@ const education = [
 ]
 
 const languages = [{ title: "English", description: "Full professional proficiency"},  { title: "Spanish", description: "Full professional proficiency"}, { title: "Korean", description: "Native"}]
+// const preferredWorkingCondition = { title: "preferredWorkingCondition", description: ["Hybrid", "Remote"]}
 export {
     about,
     experience,
     skills,
     education,
     languages,
-    sideProjects
+    sideProjects,
 }
