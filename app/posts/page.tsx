@@ -6,7 +6,7 @@ export default function Page() {
     const articles = getSortedArticles();
     return <BlogTemplate>
         <>
-        <div className={"px-16 w-full"}>
+        <div className={"px-12 lg:px-16 w-full"}>
             <h2 className={"mt-14 mb-20 text-4xl font-semibold text-center font-[family-name:var(--font-gabarito)]"}>Blog</h2>
             <ArticleList articles={articles} />
         <Footer />

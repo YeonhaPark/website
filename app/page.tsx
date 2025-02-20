@@ -15,11 +15,11 @@ export default function Home() {
   return (
       <GradientTemplate>
         <div
-            className="px-6 sm:px-6 lg:px-10 grid-rows-[20px_1fr_20px] justify-items-center min-h-screen font-[family-name:var(--font-work-sans)]">
+            className="max-w-screen-xl px-6 lg:px-10 grid-rows-[20px_1fr_20px] justify-items-center min-h-screen font-[family-name:var(--font-work-sans)]">
           <main className="relative flex flex-col gap-8 row-start-2 items-center sm:items-start">
             <section className=" pt-10 pb-14 mb-4">
               <HeroText/>
-              <p>
+              <p className="mt-6">
                 I build delightful user interfaces with a focus on delivering accessible product experiences.
                 Currently looking for a new development role. <br/>Take a look around my website and get to know more about
                 me.
