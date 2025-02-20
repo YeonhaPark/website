@@ -101,31 +101,8 @@ svg {
   transform-origin: calc(50% - 400px);
   animation: moveInCircle 20s reverse infinite;
 }
+
 .g3 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size2);
-  height: var(--circle-size2);
-  top: calc(50% - var(--circle-size2) / 2 + 200px);
-  left: calc(50% - var(--circle-size2) / 2 - 500px);
-  opacity: 1;
-  transform-origin: calc(50% + 400px);
-  animation: moveInCircle 40s linear infinite;
-}
-.g4 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size2);
-  height: var(--circle-size2);
-  top: calc(50% - var(--circle-size2) / 2);
-  left: calc(50% - var(--circle-size2) / 2);
-  opacity: 1;
-  transform-origin: calc(50% - 200px);
-  animation: moveHorizontal 40s ease infinite;
-}
-.g5 {
   position: absolute;
   background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
   mix-blend-mode: var(--blending);
@@ -138,6 +115,20 @@ svg {
   animation: moveInCircle 20s ease infinite;
 }
 
+.g4 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size1);
+  height: var(--circle-size1);
+  top: calc(50% - var(--circle-size1));
+  left: calc(50% - var(--circle-size1));
+  opacity: 0.5;
+  transform-origin: 80% calc(50% + 400px);
+  animation: moveHorizontal 40s linear infinite;
+}
+
+
 .interactive {
   position: absolute;
   background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
@@ -149,13 +140,6 @@ svg {
   opacity: 0.7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #fbfbfb;
-  }
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -163,9 +147,8 @@ body {
 @layer utilities {
   .btn-hover {
       position: relative;
-      overflow: hidden; // debug
+      overflow: hidden;
 
-    // last element should not have margin
     &:not(:last-child) {
       margin-bottom: 3rem;
     }
@@ -199,14 +182,12 @@ body {
   }
 }
 
-.sphere-lg {
-  background-image: linear-gradient(to bottom, #a6c0fe 0%, #f68084 100%);
-}
-.sphere-sm {
-  background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);
-}
-.sphere-md {
-  background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+.icon-link {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-size: cover; /* 이미지 크기를 요소 크기에 맞게 조절 */
+  background-image: url("/link.svg");
 }
 
 .icon-github {
@@ -215,4 +196,62 @@ body {
   height: 20px;
   background-size: cover; /* 이미지 크기를 요소 크기에 맞게 조절 */
   background-image: url("/github-brands.svg");
+}
+.icon-linkedin {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: cover; /* 이미지 크기를 요소 크기에 맞게 조절 */
+  background-image: url("/linkedin.svg");
+}
+.arrow-back {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-size: cover; /* 이미지 크기를 요소 크기에 맞게 조절 */
+  background-image: url("/arrow-left-solid.svg");
+}
+
+
+.article-list > li {
+  border-top: 2px solid #94a3b8;
+  border-bottom: 2px solid #94a3b8;
+}
+
+/* 첫 번째 div의 위쪽은 유지하고, 이후 div들의 위쪽은 제거 */
+.article-list > li + li {
+  border-top: none;
+}
+
+/* articles
+ */
+
+/* Table 스타일: 셀 간의 border가 겹치지 않도록 설정 */
+table {
+  border-collapse: separate; /* 각 셀의 테두리가 독립적으로 표시됨 */
+  border-spacing: 0;           /* 셀 사이 간격 0 */
+  width: 100%;
+}
+
+table th,
+table td {
+  border: 1px solid #666; /* 검은 배경에 대비되는 밝은 회색 테두리 */
+  padding: 8px;
+}
+
+/* Code block 스타일: 옅은 그레이 배경 및 읽기 쉬운 텍스트 색상 */
+.blog pre {
+  background-color: #080808; /* 옅은 그레이(다크 그레이) 배경 */
+  color: #f8f8f2;           /* 밝은 텍스트 색상 */
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+code {
+  background-color: #080808;
+  color: #f8f8f2;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
 }
