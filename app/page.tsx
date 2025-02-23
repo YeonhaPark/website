@@ -17,7 +17,7 @@ export default function Home() {
         <div
             className="max-w-screen-xl px-6 lg:px-10 grid-rows-[20px_1fr_20px] justify-items-center min-h-screen font-[family-name:var(--font-work-sans)]">
           <main className="relative flex flex-col gap-8 row-start-2 items-center sm:items-start">
-            <section className=" pt-10 pb-14 mb-4">
+            <section className="py-14 mb-4">
               <HeroText/>
               <p className="mt-6">
                 I build delightful user interfaces with a focus on delivering accessible product experiences.

@@ -119,8 +119,8 @@ svg {
   position: absolute;
   background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
   mix-blend-mode: var(--blending);
-  width: var(--circle-size1);
   height: var(--circle-size1);
+  width: var(--circle-size1);
   top: calc(50% - var(--circle-size1));
   left: calc(50% - var(--circle-size1));
   opacity: 0.5;
