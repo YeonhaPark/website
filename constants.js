@@ -33,16 +33,19 @@ const experience = [
         {
             year: '2022-2024',
             role: 'Frontend Engineer | CenacleSoft',
-            description: 'Conducted maintenance of core services, including an EMR (Electronic Medical Records) system, company website, and back-office applications\nEnhanced controlled component performance in user input events by an average of 60% through React Hook Form optimizations.\nOptimized table-based infinite scrolling by 70% using virtualization techniques, significantly improving data rendering efficiency.',
+            link: 'https://cle.care/',
+            description: 'Conducted development of core services, including an EMR (Electronic Medical Records) system, in-app(service name: Cle) web features, company website, and back-office applications\nEnhanced controlled component performance in user input events by an average of 60% through React Hook Form optimizations.\nOptimized table-based infinite scrolling by 70% using virtualization techniques, significantly improving data rendering efficiency.',
             skills: ["JavaScript", "TypeScript", "React", "Vue", "Next.js", "HTML/CSS"]
         },{
             year: '2020-2021',
             role: 'Frontend Engineer | Ryencatchers',
+            link: 'https://www.ryencatchers.com/',
             description: 'Developed the Hwahae (Birdview) admin service application, streamlining operations across order management, bulletin boards, member management, promotions, and system administration.\nImplemented CRUD functionality via REST APIs, ensuring efficient data management and seamless user interactions.\nEstablished team-wide development standards by integrating ESLint, Prettier, and commit conventions, enhancing code consistency and collaboration.',
             skills: ["JavaScript", "TypeScript", "React", "HTML/CSS"]
         },{
             year: '2019-2020',
             role: 'Frontend Engineer | PlayDapp',
+            link: 'https://market.playdapp.com/',
             description: 'Developed the frontend for a marketplace platform facilitating transactions between ERC-721 (NFTs) and digital assets.\nIntegrated Web3.js to enable seamless interaction between the frontend and the Ethereum network.\nDesigned and implemented a responsive UI using Bootstrap 4 for a grid-based, mobile-friendly experience.\nOptimized metadata-driven search functionality with Algolia, enhancing discoverability of NFT assets.',
             skills: ["JavaScript", "React", "HTML/CSS"]
         },{
