@@ -13,7 +13,7 @@ const sideProjects = [
         website: "https://bistro-map.vercel.app/",
         description: "Publish your thoughts and reviews and get rewarded.",
         github: "https://github.com/BCS-5/bistro-map",
-        usedSkills: ["TypeScript", "Solidity", "Emotion"]
+        usedSkills: ["TypeScript", "Supabase", "Solidity", "Emotion"]
     },
     {
         title: "Gyrolly",
