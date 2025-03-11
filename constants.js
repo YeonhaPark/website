@@ -1,5 +1,13 @@
 const sideProjects = [
+
     {
+        title: "Solstice",
+        src: "/solstice-thumb.png",
+        website: "https://solstice-two.vercel.app/",
+        description: "A simple and intuitive canvas tool to craft and securely store your NFT on-chain on Solana",
+        usedSkills: ["TypeScript", "Next.js", "Fabric.js", "Tailwind-css", "Solana(Rust)"],
+        github: "https://github.com/asm9677/solstice"
+    },  {
         title: "Crypto Crossword",
         src: "/crypto-crossword-thumb.png",
         website: "https://crypto-crossword.vercel.app/",
