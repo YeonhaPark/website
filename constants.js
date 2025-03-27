@@ -20,7 +20,6 @@ const sideProjects = [
         src: "/bistro-map-front.png",
         website: "https://bistro-map.vercel.app/",
         description: "Publish your thoughts and reviews and get rewarded.",
-        github: "https://github.com/BCS-5/bistro-map",
         usedSkills: ["TypeScript", "Supabase", "Solidity", "Emotion"]
     },
     {

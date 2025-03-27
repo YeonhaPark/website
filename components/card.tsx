@@ -17,9 +17,10 @@ export default function Card({title, usedSkills, github, link, description, src}
             <div className={"flex gap-5 mb-2"}>
             <h4 className={"font-semibold font-[family-name:var(--font-gabarito)]"}>{title}</h4>
             <div className="flex gap-3">
-                <Link href={github} className={"flex items-center cursor-pointer"} target="_blank" rel="noopener noreferrer">
-                <span className={"icon-github"} />
-            </Link>
+                {github && <Link href={github} className={"flex items-center cursor-pointer"} target="_blank"
+                       rel="noopener noreferrer">
+                    <span className={"icon-github"}/>
+            </Link>}
             <Link href={link} className={"flex items-center cursor-pointer"} target="_blank" rel="noopener noreferrer">
                 <span className={"icon-link"} />
             </Link>
