@@ -49,10 +49,19 @@ export default function Home() {
 
             </SectionTemplate>
             <SectionTemplate title={"Recent Posts"}>
-             <ArticleList articles={articles}/>
+              <ArticleList articles={articles}/>
+              <div className="flex gap-4 items-center flex-col sm:flex-row mt-6">
+                <a
+                    className="btn-hover border-slate-50 rounded-full transition-colors font-[family-name:var(--font-gabarito)] flex items-center justify-center bg-background text-foreground gap-2 bg-[#383838] text-sm sm:text-base py-2 px-4 sm:px-5"
+                    href="/posts"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                  More Postings →
+                </a></div>
             </SectionTemplate>
           </main>
-          <Footer />
+          <Footer/>
         </div>
       </GradientTemplate>
   );
