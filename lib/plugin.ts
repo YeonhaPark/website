@@ -1,7 +1,7 @@
 // plugins/flattenListKeepPrefix.ts
 import { Plugin } from "unified";
 import { visit } from "unist-util-visit";
-import type { Root, Element, Text, Content } from "hast";
+import type { Root, Element, Text } from "hast";
 
 export const flattenListKeepPrefix: Plugin<[], Root> = () => {
     return (tree) => {

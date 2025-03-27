@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "@/components/tag";
 
-export default function Card({title, usedSkills, github, link, description, src}: {title: string, github: string, link: string, usedSkills: string[], description: string , src: string }) {
+export default function Card({title, usedSkills, github, link, description, src}: {title: string, github?: string, link: string, usedSkills: string[], description: string , src: string }) {
     return <div  className={'w-full flex flex-col gap-6 lg:grid lg:grid-cols-3 items-center rounded-sm shadow-xs'}>
         <div style={{position: "relative"}} className={'md:col-span-1 w-10/12 h-64 lg:w-48 lg:h-32 rounded-lg'}>
             <Image  className={"rounded-t-sm w-full "} src={src} alt={title}
