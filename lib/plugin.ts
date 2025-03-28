@@ -38,3 +38,32 @@ export const flattenListKeepPrefix: Plugin<[], Root> = () => {
         });
     };
 };
+export const minifyWhitespaceBeforeTable: Plugin<[], Root> = () => {
+    return (tree) => {
+        visit(tree, "element", (node) => {
+            if (node.tagName === "table") {
+                node.children = node.children.filter(
+                    (child) =>
+                        !(child.type === "text" && /^\s*$/.test(child.value))
+                );
+                // thead, tbody 등 내부도 재귀 처리
+                for (const section of node.children) {
+                    if (section.type === "element") {
+                        section.children = section.children.filter(
+                            (child) =>
+                                !(child.type === "text" && /^\s*$/.test(child.value))
+                        );
+                        for (const tr of section.children) {
+                            if (tr.type === "element" && tr.tagName === "tr") {
+                                tr.children = tr.children.filter(
+                                    (child) =>
+                                        !(child.type === "text" && /^\s*$/.test(child.value))
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    };
+};

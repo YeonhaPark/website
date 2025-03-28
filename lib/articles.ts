@@ -7,13 +7,12 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 import rehypeHighlight from "rehype-highlight";
-// import remarkBreaks from "remark-breaks";
 import { defaultSchema } from "hast-util-sanitize";
-import { flattenListKeepPrefix } from "./plugin"
+import {flattenListKeepPrefix, minifyWhitespaceBeforeTable} from "./plugin"
+import rehypeRaw from "rehype-raw";
 const articlesDirectory = path.join(process.cwd(), "articles");
 
 export const getSortedArticles = (): ArticleItem[] => {
@@ -47,6 +46,7 @@ const customSchema = {
         "video",
         "source",
         "iframe",
+        "img",
         "div",
         "span",
         "a",
@@ -83,6 +83,7 @@ const customSchema = {
         div: ["class", "id", "style"],
         span: ["class", "id", "style"],
         a: ["href", "target", "rel"],
+        img: ["src", "alt", "width", "height", "title", "style", "class"],
         table: ["class"],
         th: ["colspan", "rowspan", "scope"],
         td: ["colspan", "rowspan", "class", "style"],
@@ -100,6 +101,7 @@ export async function markdownToHtml(markdown: string) {
         .use(remarkParse)
         .use(remarkGfm)
         .use(remarkRehype, customSchema)
+        .use(minifyWhitespaceBeforeTable)
         .use(rehypeRaw)
         .use(flattenListKeepPrefix)
         .use(rehypeSanitize)
