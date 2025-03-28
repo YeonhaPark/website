@@ -32,11 +32,12 @@ So far, so good—**or so I thought**.
 After the withdrawal, I expected to see a **+0.003 ETH** incoming transaction in MetaMask.
 But MetaMask showed:
 
-<div style="display: flex;justify-content: center;">
-<img src="/articles/metamask.png" alt="metamask" width="200" />
+
+ <div style="display: flex;justify-content: center;">
+<img src="/articles/metamask.png" alt="metamask" width="200"/>
 </div>
-<br />
-Worse: there was no "received ETH" history at all in MetaMask. It looked like nothing happened.
+
+there was no "received ETH" history at all in MetaMask. It looked like nothing happened.
 
 
 What happened? Was my contract function written bad? But when I checked the balance, it was gone!

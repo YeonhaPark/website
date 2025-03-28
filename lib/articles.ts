@@ -100,11 +100,11 @@ export async function markdownToHtml(markdown: string) {
     const result = await unified()
         .use(remarkParse)
         .use(remarkGfm)
-        .use(remarkRehype, customSchema)
+        .use(remarkRehype, { allowDangerousHtml: true }) // ✅ 수정
         .use(minifyWhitespaceBeforeTable)
-        .use(rehypeRaw)
+        .use(rehypeRaw) // ✅ rehype-raw는 반드시 remarkRehype 이후에 와야 함
         .use(flattenListKeepPrefix)
-        .use(rehypeSanitize)
+        .use(rehypeSanitize, customSchema) // ✅ 여기서 customSchema 사용
         .use(rehypeHighlight)
         .use(rehypeStringify)
         .process(markdown);
