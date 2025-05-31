@@ -41,13 +41,13 @@ const sideProjects = [
     usedSkills: ["TypeScript", "Solidity", "Emotion"],
     github: "https://github.com/YeonhaPark/crypto-crossword",
   },
-  {
-    title: "BistroMap",
-    src: "/bistro-map-front.png",
-    website: "https://bistro-map.vercel.app/",
-    description: "Publish your thoughts and reviews and get rewarded.",
-    usedSkills: ["TypeScript", "Supabase", "Solidity", "Emotion"],
-  },
+  // {
+  //   title: "BistroMap",
+  //   src: "/bistro-map-front.png",
+  //   website: "https://bistro-map.vercel.app/",
+  //   description: "Publish your thoughts and reviews and get rewarded.",
+  //   usedSkills: ["TypeScript", "Supabase", "Solidity", "Emotion"],
+  // },
 ];
 
 const about = [
