@@ -51,8 +51,8 @@ const sideProjects = [
 ];
 
 const about = [
-  "I’ve recently become enchanted by the world of web3, diving into seminars, study groups, and hackathons to explore its possibilities. I enjoy working in an environment where autonomy and collaboration coexist, as I find that it fuels my creativity and passion for development.",
   "As a frontend developer, I’ve had the opportunity to contribute to a healthcare startup, focusing on the development of EMR programs, web apps, and backoffice systems. Throughout my journey, I’ve developed a keen interest in design systems and user experience, which I believe are integral to creating seamless and efficient user interfaces.",
+  "I enjoy working in an environment where autonomy and collaboration coexist, as I find that it fuels my creativity and passion for development.",
   "Outside of work, I’m all about crafting simple joys in life. I love writing, cooking at home, and spending time with loved ones. Embracing a minimalistic lifestyle, I enjoy exploring new types of tea and occasionally whip up a matcha latte to unwind. I’m always seeking new ways to bring balance and calm into my daily routine.",
 ];
 
