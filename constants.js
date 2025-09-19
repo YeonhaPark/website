@@ -1,5 +1,13 @@
 const sideProjects = [
   {
+    title: "DexFense Protocol",
+    src: "/ingame.png",
+    website: "http://134.185.109.88:3000/",
+    description:
+      "DexFense Protocol is a tower defense game where players defend their base from waves of enemies by strategically placing towers that represent different DeFi protocols. Players can expand the story by DAO mechanism.",
+    usedSkills: ["TypeScript", "Next.js", "Phaser.js"],
+  },
+  {
     title: "PersonaChain AI",
     src: "/persona-chain-ai.png",
     website: "https://devfolio.co/projects/personachainai-3961",
