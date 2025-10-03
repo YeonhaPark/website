@@ -1,3 +1,25 @@
+const navLinks = [
+  {
+    id: 1,
+    name: "Home",
+    href: "#home",
+  },
+  {
+    id: 2,
+    name: "About",
+    href: "#about",
+  },
+  {
+    id: 3,
+    name: "Work",
+    href: "#work",
+  },
+  {
+    id: 4,
+    name: "Contact",
+    href: "#contact",
+  },
+];
 const sideProjects = [
   {
     title: "DexFense Protocol",
@@ -132,5 +154,13 @@ const languages = [
   { title: "Spanish", description: "Full professional proficiency" },
   { title: "Korean", description: "Native" },
 ];
-// const preferredWorkingCondition = { title: "preferredWorkingCondition", description: ["Hybrid", "Remote"]}
-export { about, experience, skills, education, languages, sideProjects };
+
+export {
+  navLinks,
+  about,
+  experience,
+  skills,
+  education,
+  languages,
+  sideProjects,
+};
