@@ -1,6 +1,7 @@
 import { Work_Sans, Gabarito, Wix_Madefor_Text } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import { Navbar } from "@/components/navbar";
 
 export const metadata = {
   title: "Yeonha Park | Web3 | Blockchain | Frontend Developer",
@@ -25,7 +26,6 @@ export const metadata = {
   },
 };
 
-
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -46,11 +46,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body
+      <body
         className={`${wixMadeforText.variable} ${workSans.variable} ${gabarito.variable} antialiased font-[family-name:var(--font-work-sans)]`}
-    >
-    <div className={"gradient-bg"}>{children}</div>
-    </body>
+      >
+        <div className={"max-w-7xl mx-auto"}>
+          <Navbar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

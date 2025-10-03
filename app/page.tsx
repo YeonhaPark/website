@@ -1,13 +1,14 @@
 import SectionTemplate from "@/components/section-template";
 import Card from "@/components/card";
 import HeroText from "@/components/hero-text";
-import { sideProjects } from "@/constants";
+import { myProjects } from "@/constants";
 import React from "react";
 import GradientTemplate from "@/components/gradient-template";
 import Footer from "@/components/footer";
 import ArticleList from "@/components/article-list";
 import { getSortedArticles } from "@/lib/articles";
-
+import HackerRoom from "@/components/hacker-room";
+import { Hero } from "@/components/hero";
 export default function Home() {
   const articles = getSortedArticles().slice(0, 3);
 
@@ -35,8 +36,9 @@ export default function Home() {
             </div>
           </section>
           <SectionTemplate title={"Side Projects"}>
+            <Hero />
             <div className={"flex flex-col gap-20 lg:gap-8"}>
-              {sideProjects.map((project) => (
+              {myProjects.map((project) => (
                 <Card
                   key={project.title}
                   title={project.title}
