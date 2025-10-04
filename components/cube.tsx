@@ -47,7 +47,6 @@ export const Cube = ({ ...props }: CubeProps) => {
       <group
         position={[9, -4, 0]}
         rotation={[2.6, 0.8, -1.8]}
-        scale={0.74}
         dispose={null}
         {...props}
       >

@@ -56,7 +56,9 @@ type GLTFResult = GLTF & {
 };
 
 interface HackerRoomProps {
-  [key: string]: any;
+  position?: [number, number, number];
+  rotation?: [number, number, number];
+  scale?: number | [number, number, number];
 }
 
 export function HackerRoom(props: HackerRoomProps) {
