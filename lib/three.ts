@@ -20,31 +20,31 @@ const calculateSizes = (
     cubePosition: isSmall
       ? [4, -5, 0]
       : isMobile
-      ? [5, -5, 0]
+      ? [5, -4.5, 0]
       : isTablet
-      ? [5, -5, 0]
+      ? [7, -6, -2] // 태블릿: x를 더 멀리, y를 아래로, z를 뒤로
       : [9, -5.5, 0],
     reactLogoPosition: isSmall
       ? [3, 4, 0]
       : isMobile
       ? [5, 4, 0]
       : isTablet
-      ? [5, 4, 0]
-      : [12, 3, 0],
+      ? [8, 2, -1] // 태블릿: x를 더 멀리, y를 낮게, z를 뒤로
+      : [10, 3, 0],
     ethereumLogoPosition: isSmall
       ? [-4, 2, 0]
       : isMobile
-      ? [-4, 2, 0]
+      ? [-5, 4, 0]
       : isTablet
-      ? [-6, 0, 0]
+      ? [-8, -1, -2] // 태블릿: x를 더 멀리, y를 아래로, z를 뒤로
       : [-11, 1, 0],
     targetPosition: isSmall
       ? [-5, -10, -10]
       : isMobile
-      ? [-9, -10, -10]
+      ? [-7, -8, -8]
       : isTablet
-      ? [-11, -7, -10]
-      : [-13, -13, -10],
+      ? [-9, -10, -7] // 태블릿: y를 -8에서 -5로 위로, z를 -10으로 되돌림
+      : [-13, -10, -7],
   };
 };
 
