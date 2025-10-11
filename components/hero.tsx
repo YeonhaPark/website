@@ -19,8 +19,7 @@ export const Hero = () => {
   const isTablet = useMediaQuery({ maxWidth: 1024 });
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isTallScreen = useMediaQuery({ query: "(max-aspect-ratio: 1/1)" }); // 세로형 화면 감지
-  const sizes = calculateSizes(isSmall, isMobile, isTablet, isTallScreen);
-  console.log({ isMobile, isTablet, isSmall, isTallScreen });
+  const sizes = calculateSizes(isSmall, isMobile, isTablet);
   return (
     <section className="min-h-screen w-full flex flex-col relative overflow-hidden">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
