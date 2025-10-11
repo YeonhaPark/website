@@ -20,57 +20,87 @@ const navLinks = [
     href: "#contact",
   },
 ];
-const sideProjects = [
+const myProjects = [
   {
     title: "DexFense Protocol",
     src: "/ingame.png",
     website: "http://134.185.109.88:3000/",
     description:
-      "DexFense Protocol is a tower defense game where players defend their base from waves of enemies by strategically placing towers that represent different DeFi protocols. Players can expand the story by DAO mechanism.",
-    usedSkills: ["TypeScript", "Next.js", "Phaser.js"],
+      "DexFense Protocol is a tower defense game where players defend their base from waves of enemies by strategically placing towers that represent different DeFi protocols. Players can expand the story by DAO mechanism. The game is built using Phaser.js for the game engine and Next.js for the web interface.",
+    usedSkills: [
+      { name: "TypeScript", path: "/assets/typescript.png" },
+      { name: "Next.js", path: "/assets/next.svg" },
+      { name: "Phaser.js", path: "/assets/phaser.png" },
+    ],
+    logoStyle: {
+      backgroundColor: "#fff",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    logo: "/assets/dexfense-logo.png",
+    spotlight: "/assets/spotlight1.png",
   },
   {
     title: "PersonaChain AI",
     src: "/persona-chain-ai.png",
     website: "https://devfolio.co/projects/personachainai-3961",
     description:
-      "Wallet personas categorize wallet owners' behavioral characteristics like MBTI by analyzing on-chain data (transaction patterns, protocols used, activity cycles). Won the 2nd Prize, awarded by PIN AI at BuidlAI 2025",
+      "PersonaChain AI analyzes wallet activity using on-chain data and classifies wallets into behavioral personas. Based on these personas, the system suggests and automates personalized yield strategies with the help of AI agents. Won the 2nd Prize, awarded by PIN AI at BuidlAI 2025",
     usedSkills: [
-      "TypeScript",
-      "Next.js",
-      "Dynamic SDK",
-      "Tailwind-css",
-      "Node.js",
-      "Solidity",
-      "Foundry",
-      "ElizaOS",
+      { name: "TypeScript", path: "/assets/typescript.png" },
+      { name: "Next.js", path: "/assets/next.svg" },
+      { name: "Tailwind-css", path: "/assets/tailwindcss.png" },
+      { name: "Node.js", path: "/assets/nodejs.svg" },
+      { name: "Solidity", path: "/assets/solidity.svg" },
+      { name: "Foundry", path: "/assets/foundry.png" },
     ],
     github: "https://github.com/orgs/lighthouse-buidl2025/repositories",
+    logoStyle: {
+      backgroundColor: "#e1e1e1",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+
+    logo: "/assets/persona-chain-logo.svg",
+    spotlight: "/assets/spotlight2.png",
   },
   {
     title: "Solstice",
     src: "/solstice-thumb.png",
     website: "https://solstice-two.vercel.app/",
     description:
-      "A simple and intuitive canvas tool to craft and securely store your NFT on-chain on Solana",
+      "A simple and intuitive canvas tool to craft and securely store your NFT on-chain on Solana. Solstice's frontend is built with Next.js, Fabric.js and Canvas API",
     usedSkills: [
-      "TypeScript",
-      "Next.js",
-      "Fabric.js",
-      "Tailwind-css",
-      "Solana(Rust)",
+      { name: "TypeScript", path: "/assets/typescript.png" },
+      { name: "Next.js", path: "/assets/next.svg" },
+      { name: "Fabric.js", path: "/assets/fabricjs.png" },
+      { name: "Tailwind-css", path: "/assets/tailwindcss.png" },
+      { name: "Solana(Rust)", path: "/assets/solana.png" },
     ],
     github: "https://github.com/asm9677/solstice",
+    logoStyle: {
+      backgroundColor: "#7A9CC6",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    logo: "/assets/solstice.svg",
+    spotlight: "/assets/spotlight3.png",
   },
-  {
-    title: "Crypto Crossword",
-    src: "/crypto-crossword-thumb.png",
-    website: "https://crypto-crossword.vercel.app/",
-    description:
-      "Test your crypto knowledge solving crossword game. Earn NFT rewards each time you break a quest.",
-    usedSkills: ["TypeScript", "Solidity", "Emotion"],
-    github: "https://github.com/YeonhaPark/crypto-crossword",
-  },
+  // {
+  //   title: "Crypto Crossword",
+  //   src: "/crypto-crossword-thumb.png",
+  //   website: "https://crypto-crossword.vercel.app/",
+  //   description:
+  //     "Test your crypto knowledge solving crossword game. Earn NFT rewards each time you break a quest.",
+  //   usedSkills: [
+  //     { name: "TypeScript", path: "/assets/typescript.png" },
+  //     { name: "Solidity", path: "/assets/solidity.svg" },
+  //     { name: "Emotion", path: "/assets/emotion.png" },
+  //   ],
+  //   github: "https://github.com/YeonhaPark/crypto-crossword",
+  //   logoStyle: {},
+  //   logo: "/assets/persona-chain-logo.png",
+  // },
   // {
   //   title: "BistroMap",
   //   src: "/bistro-map-front.png",
@@ -162,5 +192,5 @@ export {
   skills,
   education,
   languages,
-  sideProjects,
+  myProjects,
 };

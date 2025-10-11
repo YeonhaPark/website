@@ -9,6 +9,7 @@ import ArticleList from "@/components/article-list";
 import { getSortedArticles } from "@/lib/articles";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
+import { Projects } from "@/components/projects";
 export default function Home() {
   const articles = getSortedArticles().slice(0, 3);
 
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <Projects />
     </>
   );
 }
