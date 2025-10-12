@@ -1,6 +1,12 @@
 "use client";
 import Image from "next/image";
-import Globe from "react-globe.gl";
+import dynamic from "next/dynamic";
+// Load react-globe.gl only on the client to avoid server-side evaluation of window-based
+// modules (three-globe / three-conic-polygon-geometry) which cause `window is not defined`.
+const Globe = dynamic(() => import("react-globe.gl"), {
+  ssr: false,
+  loading: () => <div />,
+}) as React.ComponentType<Record<string, unknown>>;
 import { Button } from "./button";
 import { useState } from "react";
 export const About = () => {
