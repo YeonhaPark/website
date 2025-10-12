@@ -25,6 +25,12 @@ export const metadata = {
   },
 };
 
+// Base URL used by Next.js to resolve relative metadata images (Open Graph / Twitter)
+// Provide an env var NEXT_PUBLIC_SITE_URL (e.g. https://yeonha.vercel.app) in production.
+export const metadataBase = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://yeonha.vercel.app"
+);
+
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
