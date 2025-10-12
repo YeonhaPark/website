@@ -7,7 +7,7 @@ const Globe = dynamic(() => import("react-globe.gl"), {
   ssr: false,
   loading: () => <div />,
 }) as React.ComponentType<Record<string, unknown>>;
-import { Button } from "./button";
+import { Button } from "@/components/button";
 import { useState } from "react";
 export const About = () => {
   const [copied, setCopied] = useState(false);
