@@ -1,17 +1,17 @@
 import { Work_Sans, Gabarito, Wix_Madefor_Text } from "next/font/google";
+import { Navbar } from "@/components/navbar";
 import "./globals.css";
-import React from "react";
 
 export const metadata = {
-  title: "Yeonha Park | Web3 | Blockchain | Frontend Developer",
+  title: "Yeonha Park | Web Developer",
   openGraph: {
-    title: "Yeonha Park Portfolio | Web3 | Blockchain | Frontend Developer",
+    title: "Yeonha Park - Web Developer Portfolio",
     url: "https://yeonha.vercel.app",
-    siteName: "Yeonha Park | Web3 | Blockchain | Frontend Developer",
+    siteName: "Yeonha Park | Web Developer",
     images: [
       {
-        url: "/thumbnail.png", // 도메인 루트에 올려야 함
-        width: 1200,
+        url: "/thumbnail-website.png", // 도메인 루트에 올려야 함
+        width: 900,
         height: 630,
         alt: "portfolio thumbnail",
       },
@@ -20,11 +20,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yeonha Park | Web3 | Blockchain | Frontend Developer",
-    images: ["/thumbnail.png"],
+    title: "Yeonha Park | Web Developer",
+    images: ["/thumbnail-website.png"],
   },
 };
-
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -46,11 +45,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body
+      <body
         className={`${wixMadeforText.variable} ${workSans.variable} ${gabarito.variable} antialiased font-[family-name:var(--font-work-sans)]`}
-    >
-    <div className={"gradient-bg"}>{children}</div>
-    </body>
+      >
+        <div className="max-w-7xl mx-auto">
+          <Navbar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
