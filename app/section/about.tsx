@@ -132,7 +132,7 @@ export const About = () => {
                   alt="copy"
                   width={20}
                   height={20}
-                  className="inline-block mr-2"
+                  className="inline-block mr-2 w-4 h-auto"
                 />
                 <p className="md:text-lg font-medium text-gray_gradient text-white">
                   yonaprisca@gmail.com

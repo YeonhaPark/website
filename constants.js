@@ -39,6 +39,8 @@ const myProjects = [
     },
     logo: "/assets/dexfense-logo.png",
     spotlight: "/assets/spotlight1.png",
+    texture:
+      "https://yeonha-website-assets.s3.ap-southeast-2.amazonaws.com/dexfense.mov",
   },
   {
     title: "PersonaChain AI",
@@ -60,6 +62,8 @@ const myProjects = [
       border: "0.2px solid #36201D",
       boxShadow: "0px 0px 60px 0px #AA3C304D",
     },
+    texture:
+      "https://yeonha-website-assets.s3.ap-southeast-2.amazonaws.com/persona-ai.mov",
 
     logo: "/assets/persona-chain-logo.svg",
     spotlight: "/assets/spotlight2.png",
@@ -85,6 +89,8 @@ const myProjects = [
     },
     logo: "/assets/solstice.svg",
     spotlight: "/assets/spotlight3.png",
+    texture:
+      "https://yeonha-website-assets.s3.ap-southeast-2.amazonaws.com/solstice.mov",
   },
   // {
   //   title: "Crypto Crossword",

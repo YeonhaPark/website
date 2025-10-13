@@ -1,12 +1,18 @@
 "use client";
 import Image from "next/image";
 import { myProjects } from "@/constants";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Center, OrbitControls } from "@react-three/drei";
+import { CanvasLoader } from "../../components/canvas-loader";
+import { useProgress } from "@react-three/drei";
+import { SkillIcons } from "@/components/skill-icons";
+import { DemoComputer } from "@/components/demo-computer";
 export const Projects = () => {
+  const { progress } = useProgress();
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const currentProject = myProjects[selectedProjectIndex];
   const handleNavigation = (direction: "previous" | "next") => {
-    // 여기에 이전 또는 다음 프로젝트로 이동하는 로직을 구현하세요.
     setSelectedProjectIndex((prevIndex) => {
       if (direction === "previous") {
         return prevIndex === 0 ? myProjects.length - 1 : prevIndex - 1;
@@ -15,6 +21,7 @@ export const Projects = () => {
       }
     });
   };
+
   return (
     <section className="c-space my-20">
       <p className="head-text">My Work</p>
@@ -48,18 +55,7 @@ export const Projects = () => {
             <p className="animatedText">{currentProject.description}</p>
           </div>
           <div className="flex items-center justify-between flex-wrap gap-5">
-            <div className="flex items-center gap-3">
-              {currentProject.usedSkills.map((skill) => (
-                <div key={skill.name} className="tech-logo">
-                  <Image
-                    src={skill.path}
-                    alt={skill.name}
-                    fill
-                    className="w-5 h-5"
-                  />
-                </div>
-              ))}
-            </div>
+            <SkillIcons usedSkills={currentProject.usedSkills} />
             <a
               href={currentProject.website}
               target="_blank"
@@ -100,6 +96,20 @@ export const Projects = () => {
               />
             </button>
           </div>
+        </div>
+        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+          <Canvas>
+            <ambientLight intensity={Math.PI / 2} />
+            <directionalLight position={[10, 10, 10]} />
+            <Center>
+              <Suspense fallback={<CanvasLoader progress={progress} />}>
+                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+                  <DemoComputer texture={currentProject.texture} />
+                </group>
+              </Suspense>
+            </Center>
+            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+          </Canvas>
         </div>
       </div>
     </section>
