@@ -10,6 +10,7 @@ import { getSortedArticles } from "@/lib/articles";
 import { Hero } from "@/components/hero";
 import { About } from "@/app/section/about";
 import { Projects } from "@/app/section/projects";
+import { Contact } from "./section/contact";
 export default function Home() {
   const articles = getSortedArticles().slice(0, 3);
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </>
   );
 }
