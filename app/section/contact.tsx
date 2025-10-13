@@ -57,7 +57,7 @@ export const Contact = () => {
           className="absolute inset-0 min-h-screen"
         />
         <div className="contact-container">
-          <h3 className="head-text">Let&apos;s talk</h3>
+          <h3 className="head-text mb-4">Contact Me</h3>
           <p className="sm:text-lg text-white-600">
             {" "}
             I&apos;m currently open to new opportunities and collaborations.
