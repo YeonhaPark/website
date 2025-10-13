@@ -122,10 +122,11 @@ const about = [
   "Outside of work, I’m all about crafting simple joys in life. I love writing, cooking at home, and spending time with loved ones. Embracing a minimalistic lifestyle, I enjoy exploring new types of tea and occasionally whip up a matcha latte to unwind. I’m always seeking new ways to bring balance and calm into my daily routine.",
 ];
 
-const experience = [
+const workExperiences = [
   {
     year: "2022-2024",
-    role: "Frontend Engineer | CenacleSoft",
+    name: "CenacleSoft",
+    pos: "Frontend Engineer",
     link: "https://cle.care/",
     description:
       "Conducted development of core services, including an EMR (Electronic Medical Records) system, in-app(service name: Cle) web features, company website, and back-office applications\nEnhanced controlled component performance in user input events by an average of 60% through React Hook Form optimizations.\nOptimized table-based infinite scrolling by 70% using virtualization techniques, significantly improving data rendering efficiency.",
@@ -133,7 +134,8 @@ const experience = [
   },
   {
     year: "2020-2021",
-    role: "Frontend Engineer | Ryencatchers",
+    name: "Ryencatchers",
+    pos: "Frontend Engineer",
     link: "https://www.ryencatchers.com/",
     description:
       "Developed the Hwahae (Birdview) admin service application, streamlining operations across order management, bulletin boards, member management, promotions, and system administration.\nImplemented CRUD functionality via REST APIs, ensuring efficient data management and seamless user interactions.\nEstablished team-wide development standards by integrating ESLint, Prettier, and commit conventions, enhancing code consistency and collaboration.",
@@ -141,7 +143,8 @@ const experience = [
   },
   {
     year: "2019-2020",
-    role: "Frontend Engineer | PlayDapp",
+    name: "PlayDapp",
+    pos: "Frontend Engineer",
     link: "https://market.playdapp.com/",
     description:
       "Developed the frontend for a marketplace platform facilitating transactions between ERC-721 (NFTs) and digital assets.\nIntegrated Web3.js to enable seamless interaction between the frontend and the Ethereum network.\nDesigned and implemented a responsive UI using Bootstrap 4 for a grid-based, mobile-friendly experience.\nOptimized metadata-driven search functionality with Algolia, enhancing discoverability of NFT assets.",
@@ -149,7 +152,8 @@ const experience = [
   },
   {
     year: "2017-2019",
-    role: "Supply Specialist | StubHub",
+    name: "StubHub",
+    pos: "Supply Specialist",
     description:
       "Optimized ticket inventory by managing event landscapes, pricing, and quantities for maximum revenue.\nAnalyzed sales data to improve projections for annual events.\nEngaged with users and sellers to enhance experience and gather feedback.\nDeveloped partnerships by supporting sellers and promoting the StubHub platform.",
   },
@@ -194,7 +198,7 @@ const languages = [
 export {
   navLinks,
   about,
-  experience,
+  workExperiences,
   skills,
   education,
   languages,
