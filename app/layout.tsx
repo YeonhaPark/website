@@ -3,15 +3,15 @@ import { Navbar } from "@/components/navbar";
 import "./globals.css";
 
 export const metadata = {
-  title: "Yeonha Park | Web3 | Blockchain | Frontend Developer",
+  title: "Yeonha Park | Web Developer",
   openGraph: {
-    title: "Yeonha Park Portfolio | Web3 | Blockchain | Frontend Developer",
+    title: "Yeonha Park - Web Developer Portfolio",
     url: "https://yeonha.vercel.app",
-    siteName: "Yeonha Park | Web3 | Blockchain | Frontend Developer",
+    siteName: "Yeonha Park | Web Developer",
     images: [
       {
-        url: "/thumbnail.png", // 도메인 루트에 올려야 함
-        width: 1200,
+        url: "/thumbnail-website.png", // 도메인 루트에 올려야 함
+        width: 900,
         height: 630,
         alt: "portfolio thumbnail",
       },
@@ -20,16 +20,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yeonha Park | Web3 | Blockchain | Frontend Developer",
-    images: ["/thumbnail.png"],
+    title: "Yeonha Park | Web Developer",
+    images: ["/thumbnail-website.png"],
   },
 };
-
-// Base URL used by Next.js to resolve relative metadata images (Open Graph / Twitter)
-// Provide an env var NEXT_PUBLIC_SITE_URL (e.g. https://yeonha.vercel.app) in production.
-export const metadataBase = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://yeonha.vercel.app"
-);
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
