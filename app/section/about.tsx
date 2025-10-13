@@ -9,6 +9,7 @@ const Globe = dynamic(() => import("react-globe.gl"), {
 }) as React.ComponentType<Record<string, unknown>>;
 import { Button } from "@/components/button";
 import { useState } from "react";
+import Link from "next/link";
 export const About = () => {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
@@ -47,7 +48,7 @@ export const About = () => {
           <div className="grid-container items-center">
             <figure className="w-fit overflow-hidden">
               <Image
-                src="/assets/grid2.png"
+                src="/assets/stacks.png"
                 width={200}
                 height={200}
                 alt="profile"
@@ -59,8 +60,8 @@ export const About = () => {
               <p className="grid-subtext">
                 {" "}
                 My current tech stack includes: React, Next.js, TypeScript,
-                Tailwind CSS, Node.js, and Express. I&apos;m always eager to
-                learn and explore new tools and frameworks to enhance
+                Tailwind CSS, Node.js,Express and Solidity. I&apos;m always
+                eager to learn and explore new tools and frameworks to enhance
               </p>
             </div>
           </div>
@@ -88,11 +89,13 @@ export const About = () => {
               </p>
               <p className="grid-subtext">
                 I&apos;m based in Seoul, with remote work available.
-                <Button
-                  name="Contact Me"
-                  isBeam
-                  containerClass="w-full mt-10"
-                />
+                <Link href="#contact">
+                  <Button
+                    name="Contact Me"
+                    isBeam
+                    containerClass="w-full mt-10"
+                  />
+                </Link>
               </p>
             </div>
           </div>
