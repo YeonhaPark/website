@@ -7,6 +7,9 @@ body {
   /* font-family: var(--font-work-sans), sans-serif; */
 }
 
+* {
+  scroll-behavior: smooth;
+}
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-5;

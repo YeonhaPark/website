@@ -17,7 +17,11 @@ export const About = () => {
     setTimeout(() => setCopied(false), 2000); // 2초 후에 복사 상태 초기화
   };
   return (
-    <section className="c-space my-20">
+    <section
+      className="c-space my-20"
+      id="about"
+      style={{ scrollMarginTop: "100px" }}
+    >
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container items-center">
