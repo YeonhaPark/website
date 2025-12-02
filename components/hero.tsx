@@ -6,7 +6,7 @@ import { Suspense } from "react";
 import { CanvasLoader } from "./canvas-loader";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "@/lib/three";
-import { Target } from "./target";
+// import { Target } from "./target";
 import { ReactLogo } from "./react-logo";
 import { Cube } from "./cube";
 import { EthereumLogo } from "./ethereum-logo";
@@ -49,10 +49,10 @@ export const Hero = () => {
                 />
               </HeroCamera>
               <group>
-                <Target
+                {/* <Target
                   scale={isMobile ? 0.8 : 1.2}
                   position={sizes.targetPosition as [number, number, number]}
-                />
+                /> */}
                 <ReactLogo
                   scale={isMobile ? 0.2 : 0.5}
                   position={sizes.reactLogoPosition as [number, number, number]}
