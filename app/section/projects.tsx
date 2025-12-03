@@ -1,13 +1,50 @@
 "use client";
 import Image from "next/image";
+import * as THREE from "three";
 import { myProjects } from "@/constants";
-import { Suspense, useState } from "react";
+import React, { Suspense, useState, useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import { CanvasLoader } from "../../components/canvas-loader";
 import { useProgress } from "@react-three/drei";
 import { SkillIcons } from "@/components/skill-icons";
 import { DemoComputer } from "@/components/demo-computer";
+import gsap from "gsap";
+
+function ParentGroup({ children }: { children: React.ReactNode }) {
+  const ref = useRef<THREE.Group>(null);
+
+  useEffect(() => {
+    const target = ref.current;
+    if (!target) return;
+
+    // Ensure starting position and scale
+    if (target.position) target.position.set(-0.2, -3, 0);
+
+    // Animate Y position to compensate for internal scale increase
+    gsap.to(target.position, {
+      y: -7,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    // Enlarge scale over time
+    gsap.to(target.scale, {
+      x: 3,
+      y: 3,
+      z: 3,
+      duration: 1,
+      ease: "power3.out",
+    });
+  }, []);
+
+  return (
+    // initial values match the previous layout
+    <group ref={ref} scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+      {children}
+    </group>
+  );
+}
 export const Projects = () => {
   const { progress } = useProgress();
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
@@ -103,9 +140,9 @@ export const Projects = () => {
             <directionalLight position={[10, 10, 10]} />
             <Center>
               <Suspense fallback={<CanvasLoader progress={progress} />}>
-                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+                <ParentGroup>
                   <DemoComputer texture={currentProject.texture} />
-                </group>
+                </ParentGroup>
               </Suspense>
             </Center>
             <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
