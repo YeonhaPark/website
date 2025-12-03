@@ -22,6 +22,42 @@ const navLinks = [
 ];
 const myProjects = [
   {
+    title: "Ormchart @CenacleSoft",
+    website: "https://www.ormchart.com/",
+    description:
+      "Ormchart is an EMR(Electronic Medical Records) program designed for small to medium-sized medical institutions. Developed the frontend using React.js, focusing on creating an intuitive user interface supporting multiple user devices and viewports. Developed features like health checkups, patient questionnaires and tablet reception system.",
+    usedSkills: [{ name: "React.js", path: "/assets/react.svg" }],
+    logoStyle: {
+      backgroundColor: "#fff",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    logo: "/assets/ormchart_logo.png",
+    spotlight: "/assets/spotlight1.png",
+    texture:
+      "https://yeonha-website-assets.s3.ap-southeast-2.amazonaws.com/ormchart_pf.mov",
+  },
+  {
+    title: "Cle @CenacleSoft",
+    website: "https://cle.care/",
+    description:
+      "Developed Cle main website and in-app customer service web features using React and TypeScript. Cle is a healthcare platform for patients to access their medical records, book appointments, and communicate with healthcare providers.",
+    usedSkills: [
+      { name: "TypeScript", path: "/assets/typescript.png" },
+      { name: "Next.js", path: "/assets/next.svg" },
+      { name: "Tailwind CSS", path: "/assets/tailwindcss.png" },
+    ],
+    logoStyle: {
+      backgroundColor: "#fff",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    logo: "/assets/cle-logo.webp",
+    spotlight: "/assets/spotlight1.png",
+    texture:
+      "https://yeonha-website-assets.s3.ap-southeast-2.amazonaws.com/cle_pf.mov",
+  },
+  {
     title: "DexFense Protocol",
     src: "/ingame.png",
     website: "http://134.185.109.88:3000/",
